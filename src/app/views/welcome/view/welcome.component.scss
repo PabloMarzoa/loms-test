@@ -81,9 +81,12 @@
 }
 
 @media screen and (max-width: 720px) {
+  .welcome-body {
+    height: 80%;
+  }
   .welcome-body .main-content {
     font-size: $font-size-responsive;
-    line-height: 2rem;
+    line-height: 2.2rem;
   }
   .welcome-body .title-content {
     position: absolute;

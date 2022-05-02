@@ -15,12 +15,12 @@
     </div>
 
   </div>
+
+  <bender-component *ngIf="correctAnswers < 5"></bender-component>
 </div>
 
 <div class="action result-footer" (click)="onRestartGame()">
   Restart Game
 </div>
-
-<bender-component *ngIf="correctAnswers < 5"></bender-component>
 
 <balloon-component *ngIf="correctAnswers >= 5"></balloon-component>
