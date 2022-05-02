@@ -1,0 +1,26 @@
+<div class="result-container">
+  <div class="result-body">
+    <div class="result-title">
+      <span>{{correctAnswers}} of 10: {{correctAnswers >= 5 ? 'You win' : 'You lose'}}!</span>
+    </div>
+
+    <div class="result-questions-container" *ngFor="let question of questions; let index = index">
+      <question-component [question]="question"
+                          [showResult]="true"
+                          [editable]="false"
+                          [index]="index">
+      </question-component>
+
+      <div class="result-question-separator" *ngIf="index < 9"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="action result-footer" (click)="onRestartGame()">
+  Restart Game
+</div>
+
+<bender-component *ngIf="correctAnswers < 5"></bender-component>
+
+<balloon-component *ngIf="correctAnswers >= 5"></balloon-component>

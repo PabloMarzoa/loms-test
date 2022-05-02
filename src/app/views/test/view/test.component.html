@@ -1,0 +1,10 @@
+<div class="question-container">
+  <div class="test-body">
+    <question-component *ngIf="!!questions[currentIndex]"
+                        (saveValue)="onNextQuestion($event, currentIndex)"
+                        [index]="currentIndex"
+                        [nextActionLabel]="!!questions[currentIndex + 1] ? 'Next' : 'Final result'"
+                        [question]="questions[currentIndex]">
+    </question-component>
+  </div>
+</div>

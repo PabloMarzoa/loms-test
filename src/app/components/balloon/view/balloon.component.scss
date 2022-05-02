@@ -1,0 +1,94 @@
+.balloon-container {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden !important;
+  pointer-events: none;
+}
+
+.balloon-container .balloon {
+  height: 55px;
+  width: 50px;
+  background-color: crimson;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  border-radius: 50%;
+  animation: move 6s ease-in infinite;
+}
+
+.balloon-container .balloon:before {
+  content: "";
+  height: 40px;
+  width: 3px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.63);
+  top: 100%;
+  left: 45%;
+}
+
+.balloon-container .balloon:nth-child(2) {
+  left: 20%;
+  top: 40%;
+  background-color: yellow;
+  animation-duration: 3s;
+}
+
+.balloon-container .balloon:nth-child(3) {
+  left: 30%;
+  top: 40%;
+  background-color: lightpink;
+  animation-duration: 4s;
+}
+
+.balloon-container .balloon:nth-child(4) {
+  left: 40%;
+  top: 40%;
+  background-color: crimson;
+  animation-duration: 5s;
+}
+
+.balloon-container .balloon:nth-child(5) {
+  left: 50%;
+  top: 40%;
+  background-color: gray;
+  animation-duration: 6s;
+}
+
+.balloon-container .balloon:nth-child(6) {
+  left: 60%;
+  top: 40%;
+  background-color: orange;
+  animation-duration: 2s;
+}
+
+.balloon-container .balloon:nth-child(7) {
+  left: 70%;
+  top: 40%;
+  background-color: yellow;
+  animation-duration: 7s;
+}
+
+.balloon-container .balloon:nth-child(8) {
+  left: 80%;
+  top: 40%;
+  background-color: blue;
+  animation-duration: 3s;
+}
+
+.balloon-container .balloon:nth-child(9) {
+  left: 90%;
+  top: 40%;
+  background-color: crimson;
+  animation-duration: 4s;
+}
+
+@keyframes move{
+  0%{
+    top: 100%;
+  }
+  100%{
+    top: 0%;
+  }
+}
