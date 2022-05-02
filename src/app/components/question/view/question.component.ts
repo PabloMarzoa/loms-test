@@ -49,7 +49,7 @@ export class QuestionComponent implements OnChanges {
   }
 
   public isCorrect(): boolean {
-    return this.question?.value?.toLowerCase() === this.question?.response?.toLowerCase();
+    return this.question?.value?.toLowerCase() === this.question?.response?.toString().toLowerCase();
   }
 
   private setYears(): void {

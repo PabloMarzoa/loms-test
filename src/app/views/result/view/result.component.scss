@@ -1,13 +1,14 @@
 @import "./src/styles";
 .result-container {
-  height: calc(90% - 5em);
+  height: calc(80% - 20px);
   color: $font-color;
   display: flex;
   align-items: center;
   flex-direction: column;
   width: calc(100vw - 5em);
-  margin: 2.5em;
+  margin: 10px 2.5em;
   position: relative;
+  overflow: hidden;
 }
 
 .result-container .result-body .result-title {
@@ -31,6 +32,7 @@
   flex-direction: column;
   overflow: auto;
   padding: 20px;
+  height: 100%;
   @media (max-width: 576px) {
     width: 90vw;
     min-width: 90vw;
@@ -49,6 +51,13 @@
 }
 
 .result-footer {
-  height: calc(10% - 15px);
+  height: 10%;
   margin: 0 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .result-container .result-body {
+  }
+  .result-footer {
+  }
 }

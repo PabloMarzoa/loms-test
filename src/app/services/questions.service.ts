@@ -18,7 +18,7 @@ export class QuestionsService {
     this.questions = [];
     for (let i = 0; i <= 9; i++) {
       const randomType = Math.floor(Math.random() * (2 + 1));
-      this.questions.push(this.questionsDataService.getQuestion(i, randomType));
+      this.questions.push({...this.questionsDataService.getQuestion(i, randomType)});
     }
   }
 

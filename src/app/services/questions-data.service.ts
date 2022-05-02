@@ -80,13 +80,13 @@ export class QuestionsDataService {
     },
     {
       question: 'When did the first man go into space?',
-      value: '1939',
+      value: '1961',
       type: QuestionsTypes.Date,
       response: null
     },
     {
       question: 'What year did the Spanish Civil War end?',
-      value: '1961',
+      value: '1939',
       type: QuestionsTypes.Date,
       response: null
     },
@@ -165,7 +165,7 @@ export class QuestionsDataService {
     },
     {
       question: 'How many colours are there in a rainbow?',
-      value: '8',
+      value: '7',
       options: ['8', '7', '6'],
       response: null,
       type: QuestionsTypes.Enum
