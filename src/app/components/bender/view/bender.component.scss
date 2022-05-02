@@ -1,0 +1,26 @@
+.bender-img {
+  width: 100%;
+  height: 80%;
+  background: url("../../../../assets/img/game-over.png") no-repeat right;
+  background-size: contain;
+  position: absolute;
+  top: 100px;
+  right: -100%;
+  animation: appear ease-in-out 10s;
+  pointer-events: none;
+}
+
+@keyframes appear {
+  0% {
+    right: -100%;
+  }
+  20% {
+    right: -10px;
+  }
+  80% {
+    right: -10px;
+  }
+  100% {
+    right: -100%;
+  }
+}

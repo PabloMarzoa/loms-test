@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+$font-size: 80px;
+$font-size-responsive: 35px;
+$font-color: #EBD71C;
+$font-color-hover: #D2BE03;
+$font-color-active: #B8A40A;
+$font-color-error: #e70000;
+$font-color-correct: #00dc0d;
+$background-color: #2b2b2b;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #EBD71C;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Droid Sans", arial, verdana, sans-serif;
+  font-weight: 700;
+  user-select: none;
+}
+
+
+.action {
+  background: black;
+  color: $font-color;
+  border: 6px solid $font-color;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.action:hover {
+  background-color: $font-color-hover;
+  border-color: $font-color-hover;
+  color: black;
+}
+
+.action:active, .action:focus {
+  background-color: $font-color-active;
+  border-color: $font-color-active;
+  color: black;
+}
+
+::ng-deep .mat-select-arrow, ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label , ::ng-deep.mat-input-element, ::ng-deep.mat-select-value, ::ng-deep.mat-focused .mat-form-field-label {
+  color: $font-color !important;
+}
+
+::ng-deep.mat-form-field-underline, ::ng-deep.mat-form-field-ripple {
+  background-color: $font-color !important;
+}

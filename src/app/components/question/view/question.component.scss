@@ -1,0 +1,41 @@
+@import "./src/styles";
+.question-body {
+  margin: 0 1em;
+  color: $font-color;
+}
+
+.question-body .question-statement {
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: bolder;
+  color: $font-color;
+  @media (max-width: 576px) {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+}
+
+.question-form-filed {
+  width: 100%;
+}
+
+.question-body .question-action {
+  width: 100%;
+  margin: 5px 0;
+}
+
+.question-body .correct-response {
+  color: $font-color-correct;
+}
+
+.question-body .incorrect-response {
+  color: $font-color-error;
+}
+
+.question-body .question-error {
+  color: $font-color-error;
+}
+
+.question-form-field .question-field-input {
+  width: 100%;
+}

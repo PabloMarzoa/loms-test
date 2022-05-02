@@ -1,0 +1,73 @@
+<div class="question-body">
+  <div class="question-statement">
+    {{index + 1}}&nbsp;-&nbsp;{{question?.question}}
+  </div>
+
+  <!--Type enum-->
+  <div *ngIf="question?.type === questionsTypes.Enum && !showResult">
+    <mat-form-field class="question-form-filed">
+      <mat-select class="question-field-input"
+                  placeholder="select response"
+                  [(ngModel)]="value"
+                  [disabled]="!editable">
+        <mat-option *ngFor="let option of question?.options"
+                    [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <!--Type string-->
+  <div *ngIf="question?.type === questionsTypes.String && !showResult">
+    <mat-form-field class="question-form-filed">
+      <input class="question-field-input"
+             matInput
+             placeholder="type response"
+             [(ngModel)]="value"
+             [disabled]="!editable">
+    </mat-form-field>
+  </div>
+
+  <!--Type date-->
+  <div *ngIf="question?.type === questionsTypes.Date && !showResult">
+    <mat-form-field class="question-form-filed">
+      <input type="number"
+             class="question-field-input"
+             matInput
+             placeholder="type year"
+             [disabled]="!editable"
+             [(ngModel)]="value"
+             (ngModelChange)="filterYears($event)"
+             [matAutocomplete]="one">
+      <mat-autocomplete #one="matAutocomplete">
+        <mat-option *ngFor="let year of filteredYears"
+                    [value]="year">
+          {{year}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+
+  <div class="question-error"
+       *ngIf="showError && !hasValidValue">
+    You can't leave questions unanswered
+  </div>
+
+  <!--Only shows answers if showResult === true-->
+  <div *ngIf="showResult"
+       [ngClass]="[isCorrect() ? 'correct-response' : 'incorrect-response']">
+    Your response: {{question?.response}}
+  </div>
+
+  <div *ngIf="showResult">
+    Correct value: {{question?.value}}
+  </div>
+
+  <!--Disabled if value is not valid-->
+  <button class="action question-action"
+          (click)="onSaveValue()"
+          *ngIf="editable">
+    {{nextActionLabel}}
+  </button>
+</div>
